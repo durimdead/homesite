@@ -12,7 +12,7 @@ $( document ).ready( function( ) {
 
 			// find out which tab should be shown and hide all of the others
 			$( '.tab-content' ).each( function( ){
-				var $hiddenTabRelationshipValue = $( this ).attr( 'data-contentID' );
+				var $hiddenTabRelationshipValue = $( this ).attr( 'ng-data-contentID' );
 				if ( contentID == $hiddenTabRelationshipValue ){
 					$( this ).removeClass( 'tab-hidden' );
 				}
