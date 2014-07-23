@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="em" ng-app="jsApp">
+<head>
+
+	<meta charset="utf-8">
+
+	<!-- include css for bootstrap and jquery UI -->
+	<link rel="stylesheet" href="libraries/bootstrap/v3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libraries/bootstrap/v3.0.3/css/bootstrap-theme.min.css">
+
+	<!-- include javascript files for jquery and bootstrap -->
+	<script src="javascript/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libraries/bootstrap/v3.0.3/js/bootstrap.min.js"></script>
+
+	<!-- angularjs source -->
+	<!--<script src="javascript/angularjs/source/angular.min.js"></script>-->
+	<script src="https://code.angularjs.org/1.2.20/angular.js"></script>
+	<script src="https://code.angularjs.org/1.2.20/angular-route.js"></script>
+
+	<!-- other style sheets -->
+	<link rel="stylesheet" href="css/headerStyle.css">
+	<link rel="stylesheet" href="css/navigation.css">
+
+	<!-- other javascript files -->
+	<script src="javascript/navigation/navBar.js"></script>
+	<script src="javascript/angularjs/app.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row header">
+			<div class="col-md-12">
+				<ul class="nav nav-tabs" role="tablist" ng-controller="navBarController as navBar">
+					<!--
+					<li class="main-navigation-tabs active" data-contentID="1"><a href="#">Home</a></li>
+					<li class="main-navigation-tabs" data-contentID="2"><a href="#">Projects</a></li>
+					<li class="main-navigation-tabs" data-contentID="3"><a href="#">About</a></li>
+					<li class="main-navigation-tabs" data-contentID="4"><a href="#">Contact</a></li>
+					-->
+					<li class="main-navigation-tabs" ng-data-contentID="{{item.navID}}" ng-repeat="item in navBar.Items"><a href="#">{{item.name}}</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="tab-content" data-contentID="1">
+			<content-home></content-home>
+		</div>
+		<div class="tab-content tab-hidden" data-contentID="2">
+			<!-- header name -->
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Projects</h1>
+				</div>
+			</div>
+			<!-- content area -->
+			<div class="row">	
+				<div class="col-md-8">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 text-left">
+								<h4>Welcome!</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content tab-hidden" data-contentID="3">
+			<!-- header name -->
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>About</h1>
+				</div>
+			</div>
+			<!-- content area -->
+			<div class="row">	
+				<div class="col-md-8">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 text-left">
+								<h4>Welcome!</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content tab-hidden" data-contentID="4">
+			<!-- header name -->
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Contact</h1>
+				</div>
+			</div>
+			<!-- content area -->
+			<div class="row">	
+				<div class="col-md-8">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 text-left">
+								<h4>Welcome!</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
